@@ -36,6 +36,16 @@
     },
     {
       "cell_type": "markdown",
+      "source": [
+        "# 5.1 HW - after lecture material\n",
+        "Justin Stutler"
+      ],
+      "metadata": {
+        "id": "kAqqoGuc3fmM"
+      }
+    },
+    {
+      "cell_type": "markdown",
       "metadata": {
         "id": "ZbAPDWw3MDwb"
       },
@@ -2546,6 +2556,7 @@
       "cell_type": "markdown",
       "source": [
         "# 5.1 HW Assignment\n",
+        "Justin Stutler\n",
         "\n",
         "1. Why is the reshape function needed in the squared_loss function? Try removing the reshape function and see\n",
         "2. What would happen if we were to initialize the weights to zero? Would the algorithm still work? Report the results with zero-initialization and compare with random.\n",
@@ -2617,11 +2628,11 @@
         "        print(f'epoch {epoch + 1}, w= {w.detach().numpy().transpose()}, b= {b.detach().numpy()}, loss {float(train_l.mean()):f}')"
       ],
       "metadata": {
-        "id": "PLiBtzcDwCgU",
-        "outputId": "26959fc3-6bb7-4b7b-956f-d230fd067075",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "PLiBtzcDwCgU",
+        "outputId": "26959fc3-6bb7-4b7b-956f-d230fd067075"
       },
       "execution_count": 68,
       "outputs": [
@@ -2721,11 +2732,11 @@
         "print(f'error in estimating b: {true_b - b}')"
       ],
       "metadata": {
-        "id": "SmpmGl44xB1D",
-        "outputId": "260efeaf-7580-4e71-d30d-4f54eae8049f",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "SmpmGl44xB1D",
+        "outputId": "260efeaf-7580-4e71-d30d-4f54eae8049f"
       },
       "execution_count": 76,
       "outputs": [

@@ -51,7 +51,7 @@
         "import matplotlib.pyplot as plt\n",
         "from IPython.display import display"
       ],
-      "execution_count": 1,
+      "execution_count": 17,
       "outputs": [],
       "id": "xUXx-dHu1ELl"
     },
@@ -79,7 +79,7 @@
         "    \"activation\": [\"softmax\", \"relu\", \"leaky_relu\"],\n",
         "}"
       ],
-      "execution_count": 2,
+      "execution_count": 18,
       "outputs": [],
       "id": "M2sR41A01ELn"
     },
@@ -143,7 +143,7 @@
         "            elif initialization == \"kaiming_normal\":\n",
         "                nn.init.kaiming_normal_(layer.weight)"
       ],
-      "execution_count": 3,
+      "execution_count": 19,
       "outputs": [],
       "id": "Juch8Geu1ELn"
     },
@@ -188,7 +188,7 @@
         "        count += y.size(0)\n",
         "    return total_loss / count, correct / count"
       ],
-      "execution_count": 4,
+      "execution_count": 20,
       "outputs": [],
       "id": "VqvAwkXQ1ELo"
     },
@@ -251,7 +251,7 @@
         "        metric.add(l.item() * len(y), accuracy(y_hat, y), y.numel())\n",
         "    return metric[0] / metric[2], metric[1] / metric[2]"
       ],
-      "execution_count": 5,
+      "execution_count": 21,
       "outputs": [],
       "id": "cg3IMIAm1ELp"
     },
@@ -313,7 +313,7 @@
         "        final_test_acc=history[\"test_acc\"][-1]\n",
         "    )"
       ],
-      "execution_count": 6,
+      "execution_count": 22,
       "outputs": [],
       "id": "lDz3kQGP1ELp"
     },
@@ -333,10 +333,11 @@
       "cell_type": "code",
       "metadata": {
         "colab": {
-          "base_uri": "https://localhost:8080/"
+          "base_uri": "https://localhost:8080/",
+          "height": 0
         },
         "id": "QBvvedIP1ELp",
-        "outputId": "69ada2e1-c13f-4caa-ce14-3c70742b09e5"
+        "outputId": "0ea36453-39c0-4f6e-da25-e5561c90be56"
       },
       "source": [
         "RUNS_DIR = Path(\"/content/drive/MyDrive/lenet_cache\")\n",
@@ -392,13 +393,12 @@
         "}\n",
         "print(f\"Loaded {sum(len(runs) for runs in results.values())} completed runs.\")"
       ],
-      "execution_count": 7,
+      "execution_count": 23,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "Mounted at /content/drive\n",
             "Loaded 9 completed runs.\n"
           ]
         }
@@ -444,7 +444,7 @@
         "        for option, run in runs.items()\n",
         "    ]"
       ],
-      "execution_count": 8,
+      "execution_count": 24,
       "outputs": [],
       "id": "3ybyUBnS1ELp"
     },
@@ -453,16 +453,16 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 352
+          "height": 332
         },
         "id": "xB-f9KZT1ELp",
-        "outputId": "68ff5f01-ca89-438b-e805-0bd48a5f772c"
+        "outputId": "b352e957-5fee-4182-f2f0-721e7117f1a1"
       },
       "source": [
         "summary = pd.DataFrame(summary_rows(results))\n",
         "display(summary)"
       ],
-      "execution_count": 9,
+      "execution_count": 25,
       "outputs": [
         {
           "output_type": "display_data",
@@ -503,7 +503,7 @@
             ],
             "text/html": [
               "\n",
-              "  <div id=\"df-3584bea0-8ced-4cab-8c84-5bea1d7944c1\" class=\"colab-df-container\">\n",
+              "  <div id=\"df-47c3b24f-5013-4624-a82c-23239799882b\" class=\"colab-df-container\">\n",
               "    <div>\n",
               "<style scoped>\n",
               "    .dataframe tbody tr th:only-of-type {\n",
@@ -678,7 +678,7 @@
               "    <div class=\"colab-df-buttons\">\n",
               "\n",
               "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-3584bea0-8ced-4cab-8c84-5bea1d7944c1')\"\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-47c3b24f-5013-4624-a82c-23239799882b')\"\n",
               "            title=\"Convert this dataframe to an interactive table.\"\n",
               "            style=\"display:none;\">\n",
               "\n",
@@ -730,12 +730,12 @@
               "\n",
               "    <script>\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#df-3584bea0-8ced-4cab-8c84-5bea1d7944c1 button.colab-df-convert');\n",
+              "        document.querySelector('#df-47c3b24f-5013-4624-a82c-23239799882b button.colab-df-convert');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
               "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-3584bea0-8ced-4cab-8c84-5bea1d7944c1');\n",
+              "        const element = document.querySelector('#df-47c3b24f-5013-4624-a82c-23239799882b');\n",
               "        const dataTable =\n",
               "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
               "                                                    [key], {});\n",
@@ -755,7 +755,7 @@
               "  </div>\n",
               "\n",
               "\n",
-              "  <div id=\"id_16da2161-ce1e-4d30-b5f3-b4fce80039f1\">\n",
+              "  <div id=\"id_52af8588-7222-464f-961b-28b28dc5299b\">\n",
               "    <style>\n",
               "      .colab-df-generate {\n",
               "        background-color: #E8F0FE;\n",
@@ -799,7 +799,7 @@
               "    <script>\n",
               "      (() => {\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#id_16da2161-ce1e-4d30-b5f3-b4fce80039f1 button.colab-df-generate');\n",
+              "        document.querySelector('#id_52af8588-7222-464f-961b-28b28dc5299b button.colab-df-generate');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
@@ -945,7 +945,7 @@
         "    plt.show()\n",
         "    return fig"
       ],
-      "execution_count": 10,
+      "execution_count": 26,
       "outputs": [],
       "id": "sHF3_DgL1ELp"
     },
@@ -954,10 +954,10 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 1000
+          "height": 2345
         },
         "id": "O7gqHP391ELq",
-        "outputId": "90c97c60-1e87-4094-b31c-755b3b4d2b03"
+        "outputId": "d25a7dd9-7077-4e78-a3fa-c315229e0d53"
       },
       "source": [
         "for parameter, runs in results.items():\n",
@@ -966,7 +966,7 @@
         "\n",
         "plot_winners_clear(results);"
       ],
-      "execution_count": 11,
+      "execution_count": 27,
       "outputs": [
         {
           "output_type": "display_data",
@@ -1035,7 +1035,7 @@
         "    plt.show()\n",
         "    return fig"
       ],
-      "execution_count": 12,
+      "execution_count": 28,
       "outputs": [],
       "id": "3XWqu-Yq1ELq"
     },
@@ -1044,15 +1044,15 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 470
+          "height": 599
         },
         "id": "D2mqV1Ea1ELq",
-        "outputId": "8f03ec1e-5869-4819-d66b-9c9627496c43"
+        "outputId": "53dd4da1-eee5-400e-8316-0a9649493fad"
       },
       "source": [
         "plot_overfitting(results[\"activation\"][\"leaky_relu\"]);"
       ],
-      "execution_count": 13,
+      "execution_count": 29,
       "outputs": [
         {
           "output_type": "display_data",
@@ -1082,11 +1082,7 @@
     {
       "cell_type": "code",
       "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "HSvyCcLf1ELq",
-        "outputId": "87927ed2-f122-426b-fc9b-31015cb7eed5"
+        "id": "HSvyCcLf1ELq"
       },
       "source": [
         "# Prepare consistent image inputs.\n",
@@ -1098,19 +1094,8 @@
         "    root=\"./data\", train=False, download=True, transform=transform_FashionMNIST\n",
         ")"
       ],
-      "execution_count": 14,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stderr",
-          "text": [
-            "100%|██████████| 26.4M/26.4M [00:02<00:00, 9.73MB/s]\n",
-            "100%|██████████| 29.5k/29.5k [00:00<00:00, 165kB/s]\n",
-            "100%|██████████| 4.42M/4.42M [00:01<00:00, 3.04MB/s]\n",
-            "100%|██████████| 5.15k/5.15k [00:00<00:00, 17.1MB/s]\n"
-          ]
-        }
-      ],
+      "execution_count": 30,
+      "outputs": [],
       "id": "HSvyCcLf1ELq"
     },
     {
@@ -1192,7 +1177,7 @@
         "    plt.show()\n",
         "    return figures, maps"
       ],
-      "execution_count": 15,
+      "execution_count": 31,
       "outputs": [],
       "id": "AnZUZ_uM1ELq"
     },
@@ -1201,17 +1186,17 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 1000
+          "height": 1837
         },
         "id": "-R-vQidW1ELq",
-        "outputId": "e6de4923-4af6-4535-bf5e-2bd455b32ea4"
+        "outputId": "3d59197f-4a29-495b-de0b-fd4d84eaad7e"
       },
       "source": [
         "selected_activation = best_options(results)[\"activation\"]\n",
         "selected_run = results[\"activation\"][selected_activation]\n",
         "activation_figures, feature_maps = plot_layer_activations(selected_run, testset)"
       ],
-      "execution_count": 16,
+      "execution_count": 32,
       "outputs": [
         {
           "output_type": "stream",
@@ -1302,6 +1287,65 @@
         "A color scale is used with red representing positive neruon acitvation with blue representing negative activation, and white representing low or no activation. In both of the examples, the first layer and channel detects vertical edges which is why we can almost see a red vertical tracing of the clothing."
       ],
       "id": "KUHQ59iJ1ELr"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vo56ZXogeddb"
+      },
+      "source": [
+        "# Results\n",
+        "\n",
+        "| Hyperparameter | Best option | Final test accuracy | Difference between best and worst options |\n",
+        "|---|---|---:|---:|\n",
+        "| Initialization | Xavier normal | 86.87% | 0.21 percentage points |\n",
+        "| Batch size | 32 | 86.87% | 2.38 percentage points |\n",
+        "| Activation function | LeakyReLU | 90.71% | 9.36 percentage points |\n",
+        "\n",
+        "\n",
+        "## Experiment Setup\n",
+        "\n",
+        "In this experiment, hyperparameters are individually tested in 9 training runs, 1 for each varying hyperparameter listed below.\n",
+        "\n",
+        "- Batch size: 32, 64, and 128.\n",
+        "- Initialization: default, Xavier normal, and Kaiming normal.\n",
+        "- Activation: Softmax, ReLU, and LeakyReLU.\n",
+        "\n",
+        "The default settings use batch size 32, Xavier normal initialization, Sigmoid activation, Adam, a learning rate of 0.001, and 10 epochs.\n",
+        "\n",
+        "\n",
+        "## Batch Size\n",
+        "\n",
+        "Batch size of 32 performed the best. The model scores between 84.49% and 86.87% depending on the given batch size; this yields a 2.38% performance improvement when the batch size of 32 is used over 128.\n",
+        "\n",
+        "## Initialization\n",
+        "\n",
+        "Xavier normal scored the best at 86.87%, but the improvement was small at +0.21% compared to the default initialization.\n",
+        "\n",
+        "## Activation Function\n",
+        "\n",
+        "Activation Functions had the largest impact with scores ranging from 81.35% with Softmax to 90.71% with LeakyReLU.\n",
+        "\n",
+        "## Performance Improvement Comparison\n",
+        "\n",
+        "Optimizing the activation function made the largest performance improvement at ~9%. Batch size made the second largest performance difference at ~2%. Initialization made the least significant performance improvement at ~0.2%.\n",
+        "\n",
+        "## Optimal Hyperparameters\n",
+        "\n",
+        "The most optimal hyperparameter combination tested is: batch size = 32, Xavier normal initializationm and LeakyReLU activation which receives a score of 90.71% test accuracy.\n",
+        "\n",
+        "## Overfitting\n",
+        "\n",
+        "LeakyReLU displays overfitting during epochs 6-10. The training accuracy increased from 91.43% to 93.29%, but the test accuracy scored 90.71% at epoch 6 and epoch 10. The test accuracy peaked at 90.88% during epoch 9. The training accuracy increased while the test accuracy remained about the same which is defined as overfitting.\n",
+        "\n",
+        "\n",
+        "## Layer Activations\n",
+        "\n",
+        "The LeakyReLU model was used to visualize a pullover and coat. 2 layers are shown with layer 1 having 6, 28 x 28 maps and layer 2 having 16, 10 x 10 maps. The first layer and earlier channels look like a visual heatmap representation of the clothing. The second layer and later channels do not visually represent the clothing. The layers and channels map to different features from each other, yet the layer and channels seem to map to similar features across clothing, as the first channel and layer picks up on the vertical edges of both pieces of clothing in our comparison.\n",
+        "\n",
+        "A color scale is used with red representing positive neruon acitvation with blue representing negative activation, and white representing low or no activation. In both of the examples, the first layer and channel detects vertical edges which is why we can almost see a red vertical tracing of the clothing."
+      ],
+      "id": "vo56ZXogeddb"
     }
   ],
   "metadata": {

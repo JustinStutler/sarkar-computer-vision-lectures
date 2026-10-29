@@ -89,7 +89,7 @@
         "id": "ONAh5WTL1ELn"
       },
       "source": [
-        "## Model and weights\n",
+        "## Model and Weights\n",
         "\n",
         "Adapted from notes to compare activation functions and starting weights."
       ],
@@ -203,7 +203,7 @@
         "id": "6YmzXLZV1ELo"
       },
       "source": [
-        "## Training metrics\n",
+        "## Training Metrics\n",
         "\n",
         "Adapted from notes to track accuracy and train for each epoch."
       ],
@@ -269,7 +269,7 @@
         "id": "h0H9HZhA1ELp"
       },
       "source": [
-        "## Training a run\n",
+        "## Run Train\n",
         "Submission includes saved runs to skip re-training."
       ],
       "id": "h0H9HZhA1ELp"
@@ -332,7 +332,7 @@
         "id": "6jOK9sGS1ELp"
       },
       "source": [
-        "## Load completed runs\n",
+        "## Load Runs\n",
         "\n",
         "This code block loads all 9 saved runs. set RUNS_DIR to the folder the runs are located in."
       ],
@@ -420,7 +420,7 @@
         "id": "_fHtOB3v1ELp"
       },
       "source": [
-        "## Results table\n",
+        "## Results Table\n",
         "\n",
         "These helper functions are created to help with comparing results."
       ],
@@ -841,7 +841,7 @@
         "id": "4cerIKQb1ELp"
       },
       "source": [
-        "## Learning curves"
+        "## Plots"
       ],
       "id": "4cerIKQb1ELp"
     },
@@ -1135,9 +1135,7 @@
         "id": "2NYOAm5m1ELq"
       },
       "source": [
-        "## Display Activations of the 1st and 2nd layers of LeNet for different outputs\n",
-        "\n",
-        "test index 1 is an image of a pullover and test image 6 is the image of a coat. Layer 1, channel 1 visually appears the most similar to the specfific class while layer 2, channel 14 appears the most different. The lower layers and channels have fine grain details that match the class of the object, while the higher layers and channels appear more abstract."
+        "## Display Activations of the 1st and 2nd layers of LeNet for different outputs"
       ],
       "id": "2NYOAm5m1ELq"
     },
@@ -1270,82 +1268,46 @@
       "source": [
         "# Results\n",
         "\n",
+        "\n",
+        "\n",
         "## Setup\n",
         "\n",
         "In the experiment, 3 hyperparameters were chosen to test variations of: Batch Size (32, 64, 128), initilization (default, Xavier normal, Kaiming normal), and Activation Functions (Softmax, ReLU, LeakyReLU).\n",
         "9 runs were made with each run isolating 1 hyperparameter change. The default and remaining settings are the following: batch size 32, Xavier normal, Sigmoid, Adam, learning rate 0.001, and 10 epochs. Seed 42 was used for repeatability. The comparison includes the best score of each run (highest test accuracy).\n",
         "\n",
-        "## Results Table\n",
         "\n",
-        "| Experiment | Option | Train accuracy | Test accuracy | Selected |\n",
-        "|---|---|---:|---:|---|\n",
-        "| Batch size | 32 | 87.93% | 86.87% | Yes |\n",
-        "| Batch size | 64 | 86.56% | 85.81% |  |\n",
-        "| Batch size | 128 | 84.88% | 84.49% |  |\n",
-        "| Initialization | Default | 87.36% | 86.66% |  |\n",
-        "| Initialization | Xavier normal | 87.93% | 86.87% | Yes |\n",
-        "| Initialization | Kaiming normal | 88.02% | 86.81% |  |\n",
-        "| Activation | Softmax | 82.36% | 81.35% |  |\n",
-        "| Activation | ReLU | 93.24% | 90.45% |  |\n",
-        "| Activation | LeakyReLU | 93.29% | 90.71% | Yes |\n",
         "\n",
-        "## Discussion\n",
-        "\n",
-        "### Batch Size\n",
+        "## Batch Size\n",
         "\n",
         "Batch size of 32 performed the best. The model scores between 84.49% and 86.87% depending on the given batch size; this yields a 2.38% performance improvement when the batch size of 32 is used over 128.\n",
         "\n",
         "Batch size may have a stronger impact when training for a large amount of epochs. In this case, 10 epochs were used which may have benefitted the smaller batch size. If there are not many epochs, a smaller batch size may update the weights more aggresively which may be more effective in the short amount of time it has to train the model.\n",
         "\n",
-        "### Initialization\n",
+        "## Initialization\n",
         "\n",
         "Xavier normal scored the best at 86.87%, but the improvement was small at +0.21% compared to the default initialization.\n",
         "\n",
         "Initialization may help with exploding and vanishing ggradient problem which we did not encounter in this project. The short training run has a strong weight in preventing these issues. Initialization did not make as much of a difference as I thought it would which is why I think it may be more useful for the other issues mentioned.\n",
         "\n",
-        "### Activation Function\n",
+        "## Activation Function\n",
         "\n",
-        "Activation Functions had the largest impact with scores ranging from 81.35% with Softmax to 90.71 with LeakyReLU. Softmax activates a neuron in a binary fashion while the relu functions either provide a 0 for negative weights or a 1 : 1 vector for non negative weights which seem to activate neurons more efficiently. This efficiency gain is so drastic that the relu based models at epoch 2 outperform the softmax model at epoch 10.\n",
-        "___\n",
+        "Activation Functions had the largest impact with scores ranging from 81.35% with Softmax to 90.71% with LeakyReLU. Softmax activates a neuron in a binary fashion while the relu functions either provide a 0 for negative weights or a 1 : 1 vector for non negative weights which seem to activate neurons more efficiently. This efficiency gain is so drastic that the relu based models at epoch 2 outperform the softmax model at epoch 10.\n",
+        "\n",
         "\n",
         "\n",
         "## Overfitting\n",
         "\n",
-        "From epochs 6 to 10, LeakyReLU training accuracy increased from 91.43% to 93.29%. Test accuracy was 90.71% at both endpoints and fluctuated in between. It peaked at 90.88% during epoch 9.\n",
+        "LeakyReLU displays overfitting during epochs 6-10. The training accuracy increased from 91.43% to 93.29%, but the test accuracy scored 90.71% at epoch 6 and epoch 10. The test accuracy peaked at 90.88% during epoch 9. The model overfits the to data and begins memorizing the training data which hurts its test score.\n",
         "\n",
-        "This shows mild late-stage overfitting. The model continued improving on the training data without a sustained improvement on the test data. The test accuracy fluctuated rather than showing a large, sustained drop.\n",
         "\n",
-        "Training accuracy is measured throughout each epoch, while test accuracy is measured after it. This can make test accuracy higher than training accuracy early in training.\n",
         "\n",
         "## Layer Activations\n",
         "\n",
-        "We used the trained LeakyReLU model to visualize a pullover and a coat. The maps show outputs after activation and before pooling. Layer 1 has six 28 × 28 maps, and layer 2 has sixteen 10 × 10 maps.\n",
+        "The LeakyReLU model was used to visualize a pullover and coat. 2 layers are shown with layer 1 having 6, 28 x 28 maps and layer 2 having 16, 10 x 10 maps. The first layer and earlier channels look like a visual heatmap representation of the clothing. The second layer and later channels appear more abstract and higher level, so they do not visually represent the clothing.\n",
         "\n",
-        "The first layer retains more spatial detail. The second layer has smaller maps that combine information from the first layer. Each channel is a different response to the same input. These are feature maps, not filter weights.\n",
-        "\n",
-        "In the pullover figure, first-layer channel 1 responded strongly along vertical boundaries. Channel 3 showed strong responses around the upper central pattern and lower horizontal boundary. The second-layer responses were coarser and more localized. These observations describe that example; they do not establish that a channel detects a particular clothing part.\n",
-        "\n",
-        "In this run, the pullover at test index 1 and the coat at test index 6 were both classified correctly. Both figures are included so the response to each input can be compared.\n",
-        "\n",
-        "Both inputs use the same color scale within each layer. Red represents positive activation, blue represents negative activation, and near-white regions have values close to zero. A weak response to one image does not mean the channel is unused for every image.\n",
-        "\n",
-        "For the coat, first-layer channel 1 responds along the vertical boundaries, while channel 6 has little visible response. Second-layer channel 1 shows a strong response near the lower right portion of its map. The pullover and coat produce different responses in the same channels because their inputs are different.\n",
-        "\n",
-        "## Limitations\n",
-        "\n",
-        "The experiments used one seed and 10 epochs. Small differences between methods may change with another seed or more training. Test accuracy was used to select the winners for this assignment; a separate validation set would normally be used for selection."
+        "A color scale is used with red representing positive neruon acitvation with blue representing negative activation, and white representing low or no activation. In both of the examples, the first layer and channel detects vertical edges which is why we can almost see a red vertical tracing of the clothing."
       ],
       "id": "KUHQ59iJ1ELr"
-    },
-    {
-      "cell_type": "code",
-      "source": [],
-      "metadata": {
-        "id": "ZqQKDatHQtV8"
-      },
-      "id": "ZqQKDatHQtV8",
-      "execution_count": null,
-      "outputs": []
     }
   ],
   "metadata": {

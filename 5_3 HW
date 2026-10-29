@@ -453,7 +453,7 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 332
+          "height": 352
         },
         "id": "xB-f9KZT1ELp",
         "outputId": "b352e957-5fee-4182-f2f0-721e7117f1a1"
@@ -954,7 +954,7 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 2345
+          "height": 1294
         },
         "id": "O7gqHP391ELq",
         "outputId": "d25a7dd9-7077-4e78-a3fa-c315229e0d53"
@@ -1044,7 +1044,7 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 599
+          "height": 336
         },
         "id": "D2mqV1Ea1ELq",
         "outputId": "53dd4da1-eee5-400e-8316-0a9649493fad"
@@ -1186,7 +1186,7 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 1837
+          "height": 1388
         },
         "id": "-R-vQidW1ELq",
         "outputId": "3d59197f-4a29-495b-de0b-fd4d84eaad7e"
@@ -1287,65 +1287,6 @@
         "A color scale is used with red representing positive neruon acitvation with blue representing negative activation, and white representing low or no activation. In both of the examples, the first layer and channel detects vertical edges which is why we can almost see a red vertical tracing of the clothing."
       ],
       "id": "KUHQ59iJ1ELr"
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "vo56ZXogeddb"
-      },
-      "source": [
-        "# Results\n",
-        "\n",
-        "| Hyperparameter | Best option | Final test accuracy | Difference between best and worst options |\n",
-        "|---|---|---:|---:|\n",
-        "| Initialization | Xavier normal | 86.87% | 0.21 percentage points |\n",
-        "| Batch size | 32 | 86.87% | 2.38 percentage points |\n",
-        "| Activation function | LeakyReLU | 90.71% | 9.36 percentage points |\n",
-        "\n",
-        "\n",
-        "## Experiment Setup\n",
-        "\n",
-        "In this experiment, hyperparameters are individually tested in 9 training runs, 1 for each varying hyperparameter listed below.\n",
-        "\n",
-        "- Batch size: 32, 64, and 128.\n",
-        "- Initialization: default, Xavier normal, and Kaiming normal.\n",
-        "- Activation: Softmax, ReLU, and LeakyReLU.\n",
-        "\n",
-        "The default settings use batch size 32, Xavier normal initialization, Sigmoid activation, Adam, a learning rate of 0.001, and 10 epochs.\n",
-        "\n",
-        "\n",
-        "## Batch Size\n",
-        "\n",
-        "Batch size of 32 performed the best. The model scores between 84.49% and 86.87% depending on the given batch size; this yields a 2.38% performance improvement when the batch size of 32 is used over 128.\n",
-        "\n",
-        "## Initialization\n",
-        "\n",
-        "Xavier normal scored the best at 86.87%, but the improvement was small at +0.21% compared to the default initialization.\n",
-        "\n",
-        "## Activation Function\n",
-        "\n",
-        "Activation Functions had the largest impact with scores ranging from 81.35% with Softmax to 90.71% with LeakyReLU.\n",
-        "\n",
-        "## Performance Improvement Comparison\n",
-        "\n",
-        "Optimizing the activation function made the largest performance improvement at ~9%. Batch size made the second largest performance difference at ~2%. Initialization made the least significant performance improvement at ~0.2%.\n",
-        "\n",
-        "## Optimal Hyperparameters\n",
-        "\n",
-        "The most optimal hyperparameter combination tested is: batch size = 32, Xavier normal initializationm and LeakyReLU activation which receives a score of 90.71% test accuracy.\n",
-        "\n",
-        "## Overfitting\n",
-        "\n",
-        "LeakyReLU displays overfitting during epochs 6-10. The training accuracy increased from 91.43% to 93.29%, but the test accuracy scored 90.71% at epoch 6 and epoch 10. The test accuracy peaked at 90.88% during epoch 9. The training accuracy increased while the test accuracy remained about the same which is defined as overfitting.\n",
-        "\n",
-        "\n",
-        "## Layer Activations\n",
-        "\n",
-        "The LeakyReLU model was used to visualize a pullover and coat. 2 layers are shown with layer 1 having 6, 28 x 28 maps and layer 2 having 16, 10 x 10 maps. The first layer and earlier channels look like a visual heatmap representation of the clothing. The second layer and later channels do not visually represent the clothing. The layers and channels map to different features from each other, yet the layer and channels seem to map to similar features across clothing, as the first channel and layer picks up on the vertical edges of both pieces of clothing in our comparison.\n",
-        "\n",
-        "A color scale is used with red representing positive neruon acitvation with blue representing negative activation, and white representing low or no activation. In both of the examples, the first layer and channel detects vertical edges which is why we can almost see a red vertical tracing of the clothing."
-      ],
-      "id": "vo56ZXogeddb"
     }
   ],
   "metadata": {

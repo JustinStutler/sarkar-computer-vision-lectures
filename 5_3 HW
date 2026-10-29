@@ -345,7 +345,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "QBvvedIP1ELp",
-        "outputId": "d9c9fe6f-39b7-4a1e-fa51-b9f53eacd086"
+        "outputId": "69ada2e1-c13f-4caa-ce14-3c70742b09e5"
       },
       "source": [
         "RUNS_DIR = Path(\"/content/drive/MyDrive/lenet_cache\")\n",
@@ -467,7 +467,7 @@
           "height": 352
         },
         "id": "xB-f9KZT1ELp",
-        "outputId": "6ebce771-3d11-4acf-950b-3dc218e4cdf0"
+        "outputId": "68ff5f01-ca89-438b-e805-0bd48a5f772c"
       },
       "source": [
         "summary = pd.DataFrame(summary_rows(results))\n",
@@ -514,7 +514,7 @@
             ],
             "text/html": [
               "\n",
-              "  <div id=\"df-89e71d79-2ec4-4195-ada8-657c8182a083\" class=\"colab-df-container\">\n",
+              "  <div id=\"df-3584bea0-8ced-4cab-8c84-5bea1d7944c1\" class=\"colab-df-container\">\n",
               "    <div>\n",
               "<style scoped>\n",
               "    .dataframe tbody tr th:only-of-type {\n",
@@ -689,7 +689,7 @@
               "    <div class=\"colab-df-buttons\">\n",
               "\n",
               "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-89e71d79-2ec4-4195-ada8-657c8182a083')\"\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-3584bea0-8ced-4cab-8c84-5bea1d7944c1')\"\n",
               "            title=\"Convert this dataframe to an interactive table.\"\n",
               "            style=\"display:none;\">\n",
               "\n",
@@ -741,12 +741,12 @@
               "\n",
               "    <script>\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#df-89e71d79-2ec4-4195-ada8-657c8182a083 button.colab-df-convert');\n",
+              "        document.querySelector('#df-3584bea0-8ced-4cab-8c84-5bea1d7944c1 button.colab-df-convert');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
               "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-89e71d79-2ec4-4195-ada8-657c8182a083');\n",
+              "        const element = document.querySelector('#df-3584bea0-8ced-4cab-8c84-5bea1d7944c1');\n",
               "        const dataTable =\n",
               "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
               "                                                    [key], {});\n",
@@ -766,7 +766,7 @@
               "  </div>\n",
               "\n",
               "\n",
-              "  <div id=\"id_8fd11ac1-d674-4ae6-9bd4-a33901b73e61\">\n",
+              "  <div id=\"id_16da2161-ce1e-4d30-b5f3-b4fce80039f1\">\n",
               "    <style>\n",
               "      .colab-df-generate {\n",
               "        background-color: #E8F0FE;\n",
@@ -810,7 +810,7 @@
               "    <script>\n",
               "      (() => {\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#id_8fd11ac1-d674-4ae6-9bd4-a33901b73e61 button.colab-df-generate');\n",
+              "        document.querySelector('#id_16da2161-ce1e-4d30-b5f3-b4fce80039f1 button.colab-df-generate');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
@@ -972,7 +972,7 @@
           "height": 1000
         },
         "id": "O7gqHP391ELq",
-        "outputId": "b1766e82-02d8-409a-b3bc-f64b90e2d18e"
+        "outputId": "90c97c60-1e87-4094-b31c-755b3b4d2b03"
       },
       "source": [
         "for parameter, runs in results.items():\n",
@@ -1063,7 +1063,7 @@
           "height": 470
         },
         "id": "D2mqV1Ea1ELq",
-        "outputId": "31fe21c4-9a3b-4952-ba09-be7ee555ccb6"
+        "outputId": "8f03ec1e-5869-4819-d66b-9c9627496c43"
       },
       "source": [
         "plot_overfitting(results[\"activation\"][\"leaky_relu\"]);"
@@ -1102,7 +1102,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "HSvyCcLf1ELq",
-        "outputId": "2a8ba839-d4dd-4704-86de-a555f837fd20"
+        "outputId": "87927ed2-f122-426b-fc9b-31015cb7eed5"
       },
       "source": [
         "# Prepare consistent image inputs.\n",
@@ -1120,10 +1120,10 @@
           "output_type": "stream",
           "name": "stderr",
           "text": [
-            "100%|██████████| 26.4M/26.4M [00:00<00:00, 99.6MB/s]\n",
-            "100%|██████████| 29.5k/29.5k [00:00<00:00, 3.69MB/s]\n",
-            "100%|██████████| 4.42M/4.42M [00:00<00:00, 53.4MB/s]\n",
-            "100%|██████████| 5.15k/5.15k [00:00<00:00, 22.9MB/s]\n"
+            "100%|██████████| 26.4M/26.4M [00:02<00:00, 9.73MB/s]\n",
+            "100%|██████████| 29.5k/29.5k [00:00<00:00, 165kB/s]\n",
+            "100%|██████████| 4.42M/4.42M [00:01<00:00, 3.04MB/s]\n",
+            "100%|██████████| 5.15k/5.15k [00:00<00:00, 17.1MB/s]\n"
           ]
         }
       ],
@@ -1220,7 +1220,7 @@
           "height": 1000
         },
         "id": "-R-vQidW1ELq",
-        "outputId": "89faf499-604a-4ec2-c7f5-fe25e6af2d98"
+        "outputId": "e6de4923-4af6-4535-bf5e-2bd455b32ea4"
       },
       "source": [
         "selected_activation = best_options(results)[\"activation\"]\n",
@@ -1268,44 +1268,31 @@
       "source": [
         "# Results\n",
         "\n",
-        "\n",
-        "\n",
-        "## Setup\n",
+        "## Experiment\n",
         "\n",
         "In the experiment, 3 hyperparameters were chosen to test variations of: Batch Size (32, 64, 128), initilization (default, Xavier normal, Kaiming normal), and Activation Functions (Softmax, ReLU, LeakyReLU).\n",
         "9 runs were made with each run isolating 1 hyperparameter change. The default and remaining settings are the following: batch size 32, Xavier normal, Sigmoid, Adam, learning rate 0.001, and 10 epochs. Seed 42 was used for repeatability. The comparison includes the best score of each run (highest test accuracy).\n",
-        "\n",
         "\n",
         "\n",
         "## Batch Size\n",
         "\n",
         "Batch size of 32 performed the best. The model scores between 84.49% and 86.87% depending on the given batch size; this yields a 2.38% performance improvement when the batch size of 32 is used over 128.\n",
         "\n",
-        "Batch size may have a stronger impact when training for a large amount of epochs. In this case, 10 epochs were used which may have benefitted the smaller batch size. If there are not many epochs, a smaller batch size may update the weights more aggresively which may be more effective in the short amount of time it has to train the model.\n",
-        "\n",
         "## Initialization\n",
         "\n",
         "Xavier normal scored the best at 86.87%, but the improvement was small at +0.21% compared to the default initialization.\n",
         "\n",
-        "Initialization may help with exploding and vanishing ggradient problem which we did not encounter in this project. The short training run has a strong weight in preventing these issues. Initialization did not make as much of a difference as I thought it would which is why I think it may be more useful for the other issues mentioned.\n",
-        "\n",
         "## Activation Function\n",
         "\n",
-        "Activation Functions had the largest impact with scores ranging from 81.35% with Softmax to 90.71% with LeakyReLU. Softmax activates a neuron in a binary fashion while the relu functions either provide a 0 for negative weights or a 1 : 1 vector for non negative weights which seem to activate neurons more efficiently. This efficiency gain is so drastic that the relu based models at epoch 2 outperform the softmax model at epoch 10.\n",
+        "Activation Functions had the largest impact with scores ranging from 81.35% with Softmax to 90.71% with LeakyReLU.\n",
         "\n",
+        "## Performance Improvement Comparison\n",
         "\n",
+        "Optimizing the activation function made the largest performance improvement at ~9%. Batch size made the second largest performance difference at ~2%. Initialization made the least significant performance improvement at ~0.2%.\n",
         "\n",
         "## Overfitting\n",
         "\n",
-        "LeakyReLU displays overfitting during epochs 6-10. The training accuracy increased from 91.43% to 93.29%, but the test accuracy scored 90.71% at epoch 6 and epoch 10. The test accuracy peaked at 90.88% during epoch 9. The model overfits the to data and begins memorizing the training data which hurts its test score.\n",
-        "\n",
-        "\n",
-        "\n",
-        "## Layer Activations\n",
-        "\n",
-        "The LeakyReLU model was used to visualize a pullover and coat. 2 layers are shown with layer 1 having 6, 28 x 28 maps and layer 2 having 16, 10 x 10 maps. The first layer and earlier channels look like a visual heatmap representation of the clothing. The second layer and later channels appear more abstract and higher level, so they do not visually represent the clothing.\n",
-        "\n",
-        "A color scale is used with red representing positive neruon acitvation with blue representing negative activation, and white representing low or no activation. In both of the examples, the first layer and channel detects vertical edges which is why we can almost see a red vertical tracing of the clothing."
+        "LeakyReLU displays overfitting during epochs 6-10. The training accuracy increased from 91.43% to 93.29%, but the test accuracy scored 90.71% at epoch 6 and epoch 10. The test accuracy peaked at 90.88% during epoch 9. The model overfits the to data and begins memorizing the training data which hurts its test score."
       ],
       "id": "KUHQ59iJ1ELr"
     }
